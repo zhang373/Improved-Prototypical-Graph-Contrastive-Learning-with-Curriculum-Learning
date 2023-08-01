@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="172.18.242.170" id="34ca1bc0-ce5a-4551-ad98-da59c308b1ea" port="443" customName="liuchen" nameFormat="CUSTOM" useOpenSSHConfig="true">
+        <option name="customName" value="liuchen" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="121.46.19.2" id="929c213b-4f93-4358-bda7-940f6f104424" port="20847" customName="su02" nameFormat="CUSTOM" useOpenSSHConfig="true">
+        <option name="customName" value="su02" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

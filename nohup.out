@@ -1,0 +1,466 @@
+argument is set
+device is set
+len(dataset) 4110
+len(dataset_eval) 4110
+dataset.get_num_feature() 37
+dataset_eval.get_num_feature() 37
+Data: NCI1  is OK
+weight_dict:  odict_keys(['encoder.convs.0.eps', 'encoder.convs.0.nn.0.weight', 'encoder.convs.0.nn.0.bias', 'encoder.convs.0.nn.2.weight', 'encoder.convs.0.nn.2.bias', 'encoder.convs.1.eps', 'encoder.convs.1.nn.0.weight', 'encoder.convs.1.nn.0.bias', 'encoder.convs.1.nn.2.weight', 'encoder.convs.1.nn.2.bias', 'encoder.convs.2.eps', 'encoder.convs.2.nn.0.weight', 'encoder.convs.2.nn.0.bias', 'encoder.convs.2.nn.2.weight', 'encoder.convs.2.nn.2.bias', 'encoder.convs.3.eps', 'encoder.convs.3.nn.0.weight', 'encoder.convs.3.nn.0.bias', 'encoder.convs.3.nn.2.weight', 'encoder.convs.3.nn.2.bias', 'encoder.convs.4.eps', 'encoder.convs.4.nn.0.weight', 'encoder.convs.4.nn.0.bias', 'encoder.convs.4.nn.2.weight', 'encoder.convs.4.nn.2.bias', 'encoder.bns.0.weight', 'encoder.bns.0.bias', 'encoder.bns.0.running_mean', 'encoder.bns.0.running_var', 'encoder.bns.0.num_batches_tracked', 'encoder.bns.1.weight', 'encoder.bns.1.bias', 'encoder.bns.1.running_mean', 'encoder.bns.1.running_var', 'encoder.bns.1.num_batches_tracked', 'encoder.bns.2.weight', 'encoder.bns.2.bias', 'encoder.bns.2.running_mean', 'encoder.bns.2.running_var', 'encoder.bns.2.num_batches_tracked', 'encoder.bns.3.weight', 'encoder.bns.3.bias', 'encoder.bns.3.running_mean', 'encoder.bns.3.running_var', 'encoder.bns.3.num_batches_tracked', 'encoder.bns.4.weight', 'encoder.bns.4.bias', 'encoder.bns.4.running_mean', 'encoder.bns.4.running_var', 'encoder.bns.4.num_batches_tracked', 'encoder.proj_head.0.weight', 'encoder.proj_head.0.bias', 'encoder.proj_head.2.weight', 'encoder.proj_head.2.bias', 'proj_head.0.weight', 'proj_head.0.bias', 'proj_head.2.weight', 'proj_head.2.bias', 'prototypes.weight', 'local_d.block.0.weight', 'local_d.block.0.bias', 'local_d.block.2.weight', 'local_d.block.2.bias', 'local_d.block.4.weight', 'local_d.block.4.bias', 'local_d.linear_shortcut.weight', 'local_d.linear_shortcut.bias', 'global_d.block.0.weight', 'global_d.block.0.bias', 'global_d.block.2.weight', 'global_d.block.2.bias', 'global_d.block.4.weight', 'global_d.block.4.bias', 'global_d.linear_shortcut.weight', 'global_d.linear_shortcut.bias'])
+model.gnn:  Encoder_Core(
+  (convs): ModuleList(
+    (0): GINConv(nn=Sequential(
+      (0): Linear(in_features=37, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+    ))
+    (1): GINConv(nn=Sequential(
+      (0): Linear(in_features=32, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+    ))
+    (2): GINConv(nn=Sequential(
+      (0): Linear(in_features=32, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+    ))
+    (3): GINConv(nn=Sequential(
+      (0): Linear(in_features=32, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+    ))
+    (4): GINConv(nn=Sequential(
+      (0): Linear(in_features=32, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=32, out_features=32, bias=True)
+    ))
+  )
+  (bns): ModuleList(
+    (0): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (4): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (proj_head): Sequential(
+    (0): Linear(in_features=160, out_features=160, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=160, out_features=160, bias=True)
+  )
+)
+model: 
+ GNN_pregraph(
+  (gnn): Encoder_Core(
+    (convs): ModuleList(
+      (0): GINConv(nn=Sequential(
+        (0): Linear(in_features=37, out_features=32, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=32, out_features=32, bias=True)
+      ))
+      (1): GINConv(nn=Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=32, out_features=32, bias=True)
+      ))
+      (2): GINConv(nn=Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=32, out_features=32, bias=True)
+      ))
+      (3): GINConv(nn=Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=32, out_features=32, bias=True)
+      ))
+      (4): GINConv(nn=Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=32, out_features=32, bias=True)
+      ))
+    )
+    (bns): ModuleList(
+      (0): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (3): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (4): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (proj_head): Sequential(
+      (0): Linear(in_features=160, out_features=160, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Linear(in_features=160, out_features=160, bias=True)
+    )
+  )
+  (classifier): Net(
+    (hidden): Linear(in_features=160, out_features=320, bias=True)
+    (out): Linear(in_features=320, out_features=2, bias=True)
+  )
+)
+model is set
+optimizer parameters:  Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.01
+    weight_decay: 1e-06
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.01
+    weight_decay: 1e-06
+)
+optimizer is set
+=================epoch:  1
+fine-model.forward, embedding is done
+epoch:  1   loss:  tensor(0.6917, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.754257907542579 0.7710462287104622
+Epoch 1, acc 0.7710462287104622
+=================epoch:  2
+fine-model.forward, embedding is done
+epoch:  2   loss:  tensor(0.6682, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7695863746958638 0.7703163017031629
+Epoch 2, acc 0.7703163017031629
+=================epoch:  3
+fine-model.forward, embedding is done
+epoch:  3   loss:  tensor(0.6501, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7985401459854016 0.7978102189781022
+Epoch 3, acc 0.7978102189781022
+=================epoch:  4
+fine-model.forward, embedding is done
+epoch:  4   loss:  tensor(0.6469, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7698296836982969 0.7744525547445256
+Epoch 4, acc 0.7744525547445256
+=================epoch:  5
+fine-model.forward, embedding is done
+epoch:  5   loss:  tensor(0.6193, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7844282238442822 0.7880778588807786
+Epoch 5, acc 0.7880778588807786
+=================epoch:  6
+fine-model.forward, embedding is done
+epoch:  6   loss:  tensor(0.6096, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7929440389294404 0.7900243309002433
+Epoch 6, acc 0.7900243309002433
+=================epoch:  7
+fine-model.forward, embedding is done
+epoch:  7   loss:  tensor(0.6003, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7990267639902677 0.7912408759124088
+Epoch 7, acc 0.7912408759124088
+=================epoch:  8
+fine-model.forward, embedding is done
+epoch:  8   loss:  tensor(0.5832, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.78661800486618 0.7931873479318735
+Epoch 8, acc 0.7931873479318735
+=================epoch:  9
+fine-model.forward, embedding is done
+epoch:  9   loss:  tensor(0.5759, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.789051094890511 0.7927007299270074
+Epoch 9, acc 0.7927007299270074
+=================epoch:  10
+fine-model.forward, embedding is done
+epoch:  10   loss:  tensor(0.5644, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7985401459854014 0.8019464720194647
+Epoch 10, acc 0.8019464720194647
+=================epoch:  11
+fine-model.forward, embedding is done
+epoch:  11   loss:  tensor(0.5488, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8075425790754259 0.8024330900243308
+Epoch 11, acc 0.8024330900243308
+=================epoch:  12
+fine-model.forward, embedding is done
+epoch:  12   loss:  tensor(0.5466, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7861313868613139 0.7995133819951339
+Epoch 12, acc 0.7995133819951339
+=================epoch:  13
+fine-model.forward, embedding is done
+epoch:  13   loss:  tensor(0.5427, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7973236009732361 0.802919708029197
+Epoch 13, acc 0.802919708029197
+=================epoch:  14
+fine-model.forward, embedding is done
+epoch:  14   loss:  tensor(0.5375, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7927007299270074 0.8012165450121655
+Epoch 14, acc 0.8012165450121655
+=================epoch:  15
+fine-model.forward, embedding is done
+epoch:  15   loss:  tensor(0.5305, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7941605839416058 0.8065693430656935
+Epoch 15, acc 0.8065693430656935
+=================epoch:  16
+fine-model.forward, embedding is done
+epoch:  16   loss:  tensor(0.5297, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8051094890510949 0.8021897810218979
+Epoch 16, acc 0.8021897810218979
+=================epoch:  17
+fine-model.forward, embedding is done
+epoch:  17   loss:  tensor(0.5169, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8104622871046228 0.8092457420924573
+Epoch 17, acc 0.8092457420924573
+=================epoch:  18
+fine-model.forward, embedding is done
+epoch:  18   loss:  tensor(0.5072, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.805839416058394 0.805839416058394
+Epoch 18, acc 0.805839416058394
+=================epoch:  19
+fine-model.forward, embedding is done
+epoch:  19   loss:  tensor(0.5031, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8 0.8004866180048662
+Epoch 19, acc 0.8004866180048662
+=================epoch:  20
+fine-model.forward, embedding is done
+epoch:  20   loss:  tensor(0.4870, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8031630170316302 0.8082725060827249
+Epoch 20, acc 0.8082725060827249
+=================epoch:  21
+fine-model.forward, embedding is done
+epoch:  21   loss:  tensor(0.4751, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.8160583941605839 0.805839416058394
+Epoch 21, acc 0.805839416058394
+=================epoch:  22
+fine-model.forward, embedding is done
+epoch:  22   loss:  tensor(0.4713, device='cuda:0', grad_fn=<NllLossBackward>)
+fine-model.forward, embedding is done
+round 0 out of 10
+round 1 out of 10
+round 2 out of 10
+round 3 out of 10
+round 4 out of 10
+round 5 out of 10
+round 6 out of 10
+round 7 out of 10
+round 8 out of 10
+round 9 out of 10
+acc in val_set {}, acc in train_set {} 0.7992700729927007 0.8024330900243308
+Epoch 22, acc 0.8024330900243308
